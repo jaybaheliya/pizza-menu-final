@@ -116,6 +116,7 @@ body {
   overflow: hidden;
   padding: 5px;
   border: 1px solid #ddd;
+  background-color: ghostwhite;
 }
 
 .pizzasWrapper>div>h3 {
@@ -131,6 +132,13 @@ body {
 .pizza {
   display: flex;
   gap: 3.2rem;
+
+
+}
+
+.pizza.soldOut {
+  opacity: 0.6;
+  filter: grayscale(100%);
 }
 
 .pizza img {
