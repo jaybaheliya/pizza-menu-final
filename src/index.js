@@ -117,6 +117,7 @@ function Pizza({ pizzaObjb }) {
   // console.log(props);
   // if (props.pizzaObjb.soldOut) return null;
   let checkSold = pizzaObjb.soldOut ? "soldOut" : "";
+  let checkPrice = pizzaObjb.soldOut ? "Sold Out" : "";
 
   return (
     <div className={"pizza " + checkSold}>
@@ -124,7 +125,7 @@ function Pizza({ pizzaObjb }) {
       <div>
         <h3 style={{ color: "black" }}>{pizzaObjb.name}</h3>
         <p>{pizzaObjb.ingredients}</p>
-        <span>{pizzaObjb.price + 3 + "€"}</span>
+        <span>{checkPrice ? checkPrice : pizzaObjb.price + 3 + "€"}</span>
       </div>
     </div>
   );
