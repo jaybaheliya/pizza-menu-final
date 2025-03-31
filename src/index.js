@@ -66,11 +66,19 @@ function Menu() {
       <h2>Our Menu</h2>
 
       {numPizzas > 0 ? (
-        <div className="pizzasWrapper">
-          {pizzas.map((pizza) => (
-            <Pizza pizzaObjb={pizza} key={pizza.name} />
-          ))}
-        </div>
+        // <React.Fragment>
+        <>
+          <p>
+            Autentic Italian cuisine. 6 creative dishes to choose from. All from
+            our stone oven, all organic, all delicious.
+          </p>
+
+          <div className="pizzasWrapper">
+            {pizzas.map((pizza) => (
+              <Pizza pizzaObjb={pizza} key={pizza.name} />
+            ))}
+          </div>
+        </>
       ) : (
         <p>
           Sorry currently we are woring on our menu, Please come back later :(
@@ -130,7 +138,7 @@ function Header() {
   );
 }
 
-function Footer() {
+function Footer(numPizzas) {
   let currentHour = new Date().getHours();
   const openHour = 10;
   const closeHour = 22;
