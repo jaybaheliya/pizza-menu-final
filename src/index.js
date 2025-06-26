@@ -113,7 +113,7 @@ function Menu() {
   );
 }
 
-function Pizza({ pizzaObjb }) { 
+function Pizza({ pizzaObjb }) {  
   // console.log(props);
   // if (props.pizzaObjb.soldOut) return null;
   let checkSold = pizzaObjb.soldOut ? "soldOut" : "";
